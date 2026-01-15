@@ -18,11 +18,11 @@ A RESTful User Management System built using Spring Boot that supports CRUD oper
 - Global exception handling
 
 ## API Endpoints
-POST /UMS/addUser  
-GET /UMS/getUser
-GET /UMS/getAllUsers/{id}
-PUT /UMS/updateUser/{id}  
-DELETE /UMS/deleteUser/{id}
+- POST /UMS/addUser
+- GET /UMS/getUser
+- GET /UMS/getAllUsers/{id}
+- PUT /UMS/updateUser/{id}
+- DELETE /UMS/deleteUser/{id}
 
 ## How to Run
 1. Clone repository
