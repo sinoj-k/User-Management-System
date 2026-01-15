@@ -7,7 +7,7 @@ A RESTful User Management System built using Spring Boot that supports CRUD oper
 - Java
 - Spring Boot
 - Spring Data JPA
-- MySQL
+- PostgreSQL
 - REST API
 
 ## Features
@@ -26,6 +26,6 @@ A RESTful User Management System built using Spring Boot that supports CRUD oper
 
 ## How to Run
 1. Clone repository
-2. Configure MySQL in application.properties
+2. Configure PostgreSQL in application.properties
 3. Run `UserManagementApplication.java`
 
