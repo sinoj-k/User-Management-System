@@ -7,6 +7,8 @@ import java.util.List;
 public interface UserService {
     UserModel addUser(UserModel model);
 
+    List<UserModel> addUsers(List<UserModel> model);
+
     UserModel getUser(Long id);
 
     List<UserModel> getAllUsers();
@@ -14,4 +16,5 @@ public interface UserService {
     UserModel updateUser(Long id, UserModel model);
 
     void deleteUser(Long id);
+
 }

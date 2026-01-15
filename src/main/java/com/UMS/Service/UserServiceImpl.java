@@ -5,6 +5,7 @@ import com.UMS.Model.UserModel;
 import com.UMS.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,9 +15,15 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserRepository userRepository;
+
     @Override
     public UserModel addUser(UserModel model) {
         return userRepository.save(model);
+    }
+
+    @Override
+    public List<UserModel> addUsers(List<UserModel> model) {
+        return userRepository.saveAll(model);
     }
 
     @Override
@@ -36,6 +43,7 @@ public class UserServiceImpl implements UserService{
         user.setName(model.getName());
         user.setEmail(model.getEmail());
         user.setPassword(model.getPassword());
+        user.setRole(model.getRole());
         return userRepository.save(user);
     }
 
@@ -44,4 +52,6 @@ public class UserServiceImpl implements UserService{
         UserModel user = userRepository.findById(id).orElseThrow (()->new UserNotFoundException("User not found"));
         userRepository.delete(user);
     }
+
+
 }

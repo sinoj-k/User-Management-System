@@ -21,14 +21,19 @@ public class UserController {
         return new ResponseEntity<>(userService.addUser(model), HttpStatus.CREATED);
     }
 
+    @PostMapping("/addUsers")
+    public ResponseEntity<List<UserModel>> addUSers(@RequestBody List<UserModel> model){
+        return new ResponseEntity<>(userService.addUsers(model),HttpStatus.CREATED);
+    }
+
     @GetMapping("/getUser/{id}")
-    public UserModel getUser(@PathVariable Long id){
-        return userService.getUser(id);
+    public ResponseEntity<UserModel> getUser(@PathVariable Long id){
+        return ResponseEntity.ok(userService.getUser(id));
     }
 
     @GetMapping("/getAllUsers")
-    public List<UserModel> getAllUsers(){
-        return userService.getAllUsers();
+    public ResponseEntity<List<UserModel>> getAllUsers(){
+        return ResponseEntity.ok(userService.getAllUsers());
     }
 
     @PutMapping("/updateUser/{id}")
