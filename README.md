@@ -1,4 +1,4 @@
-# User Management System - Spring Boot
+# User Management System REST API
 
 ## Description
 A RESTful User Management System built using Spring Boot that supports CRUD operations.
@@ -7,8 +7,9 @@ A RESTful User Management System built using Spring Boot that supports CRUD oper
 - Java
 - Spring Boot
 - Spring Data JPA
-- PostgreSQL
+- MySQL
 - REST API
+- Hibernate
 
 ## Features
 - Create user
